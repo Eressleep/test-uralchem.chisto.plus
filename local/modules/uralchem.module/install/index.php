@@ -6,7 +6,7 @@ use Bitrix\Main\Entity\Base;
 use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\ModuleManager;
-use Uralchem\Module\Jwt\JwtTable;
+use Uralchem\Module\Tables\JwtTable;
 
 class uralchem_module extends CModule
 {
@@ -88,9 +88,6 @@ class uralchem_module extends CModule
 
     public function UnInstallDB()
     {
-        echo '<pre>';
-        var_dump(JwtTable::getEntity()->getDataClass());
-        echo '</pre>';
         if (Application::getConnection()->isTableExists(
             Base::getInstance(JwtTable::getEntity()->getDataClass())->getDBTableName()
         )) {

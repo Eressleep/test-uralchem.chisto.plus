@@ -1,6 +1,6 @@
 <?php
 
-namespace Uralchem\Module\Jwt;
+namespace Uralchem\Module\Tables;
 
 
 use Bitrix\Main\Entity;
